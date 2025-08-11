@@ -1,0 +1,18 @@
+{
+  "name": "cicd-tokowaka-worker",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --env production",
+    "deploy:dev": "wrangler deploy --env development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["cloudflare", "worker", "proxy"],
+  "author": "",
+  "license": "ISC",
+  "description": "Cloudflare Worker to proxy requests from cicdtokowaka.aem-screens.net to frescopa.aem-screens.net",
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}

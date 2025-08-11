@@ -1,0 +1,13 @@
+name = "cicd-tokowaka-worker"
+main = "src/index.js"
+compatibility_date = "2024-01-01"
+account_id = "68e6632adf76183424b251e874663bde"
+
+[env.production]
+name = "cicd-tokowaka-worker"
+routes = [
+  { pattern = "cicdtokowaka.aem-screens.net/*", zone_name = "aem-screens.net" }
+]
+
+[env.development]
+name = "dummy-worker-dev" 
