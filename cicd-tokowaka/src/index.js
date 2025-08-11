@@ -22,16 +22,16 @@ export default {
       
       // Fetch the response from the origin
       const response = await fetch(originRequest);
-      
+      // add one <div> in response body which is hidden and has a class name "cicd-tokowaka-debug"
+      const body = await response.text();
+      const newBody = body.replace('</body>', '<div class="cicd-tokowaka-debug">Debug</div></body>');
+
       // Create a new response with the origin's content
-      const newResponse = new Response(response.body, {
+      const newResponse = new Response(newBody, {
         status: response.status,
         statusText: response.statusText,
         headers: response.headers
       });
-      
-      // add a debug header
-      newResponse.headers.set('X-Debug', 'true');
       
       // Add CORS headers if needed
       newResponse.headers.set('Access-Control-Allow-Origin', '*');
