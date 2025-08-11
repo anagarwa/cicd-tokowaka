@@ -6,6 +6,7 @@ export default {
   async fetch(request, env, ctx) {
     try {
       // Get the URL from the request
+      console.log('Request URL:', request.url);
       const url = new URL(request.url);
       
       // Construct the origin URL (frescopa.aem-screens.net)
