@@ -30,6 +30,9 @@ export default {
         headers: response.headers
       });
       
+      // add a debug header
+      newResponse.headers.set('X-Debug', 'true');
+      
       // Add CORS headers if needed
       newResponse.headers.set('Access-Control-Allow-Origin', '*');
       newResponse.headers.set('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
